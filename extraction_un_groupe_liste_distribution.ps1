@@ -1,0 +1,1 @@
+Get-ADGroupMember -identity "RU-Collecte-Biot-Valbonne-Vallauris" -Recursive | Get-ADUser -Property * | Select Name,DisplayName,title,department?,description,UserPrincipalName,mail | Export-csv -path C:\Output\groupe_X.csv -Encoding Unicode -NoTypeInformation

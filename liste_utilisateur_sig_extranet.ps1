@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -SearchBase "OU=Prestataires,OU=Utilisateurs Externes,DC=casa,DC=priv" -property * | Select SamAccountName,sn,Name,givenName,mail,DisplayName,title,Company,PasswordExpired,LastLogonDate,LockedOut,PasswordLastSet,whenCreated| Export-csv -path C:\Output\user_extranet.csv -Encoding Unicode -NoTypeInformation

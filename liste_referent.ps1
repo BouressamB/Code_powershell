@@ -1,0 +1,1 @@
+Get-ADGroupMember -identity "SIG REFERENTS" -Recursive | Get-ADUser -Property * | Select Name,DisplayName,title,department?,description | Export-csv -path C:\Output\Groupmembers.csv -Encoding Unicode -NoTypeInformation
